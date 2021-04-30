@@ -1,0 +1,425 @@
+@charset "UTF-8";
+/* Fontovi */
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&family=Playfair+Display:ital@0;1&display=swap");
+/* Boje */
+/* Padding */
+/* Početne postavke stranice */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Hind", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title {
+  font-family: "Playfair Display", serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-list li {
+  margin: 0px;
+}
+
+.nav-list li a {
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.line {
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  margin: 50px 0;
+}
+
+.article-link {
+  color: #6693e6;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  display: flow-root;
+  margin: 10px 0;
+}
+
+.article-title {
+  font-weight: 800;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.article-time {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #a7a7a7;
+}
+
+/* Boje */
+/* Padding */
+/* Boje */
+/* Padding */
+#page-wrapper_article {
+  width: 100%;
+  max-width: 1550px;
+  margin: 30px auto 50px auto;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.section_title {
+  color: #6693e6;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.article_title {
+  font-size: 2.1rem;
+  padding: 10px 0 20px 0;
+}
+
+.article_desc {
+  font-size: 1rem;
+  color: #242424;
+}
+
+.article_time {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 15px;
+  color: #5f5f5f;
+  position: relative;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.article_time::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 3px);
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #5f5f5f;
+  display: inline-block;
+}
+
+.article_content {
+  width: 100%;
+  max-width: 700px;
+  margin: 30px auto 0 auto;
+  text-align: initial;
+}
+
+.article_content p + p {
+  margin-top: 30px;
+}
+
+/* Boje */
+/* Padding */
+.form-title {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 1.7rem;
+}
+
+#form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 30px;
+}
+
+#form label {
+  width: 100%;
+}
+
+#form label input:not([type="checkbox"]),
+#form label textarea,
+#form label select {
+  width: 100%;
+  max-width: 800px;
+  padding: 8px;
+  border: none;
+  -webkit-box-shadow: 0 0 4px #031a32;
+          box-shadow: 0 0 4px #031a32;
+  border-radius: 8px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #021325;
+}
+
+#form label input:not([type="checkbox"]):focus,
+#form label textarea:focus,
+#form label select:focus {
+  -webkit-box-shadow: 0 0 4px #031a32, 0 0 12px #031a3293;
+          box-shadow: 0 0 4px #031a32, 0 0 12px #031a3293;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#form label select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  background: url("../img/chevron-down.svg") 97% 50% no-repeat;
+  background-size: 1rem;
+}
+
+#form label input[type="file"] {
+  display: none;
+}
+
+#form label[for="odabirSlike"] {
+  width: 100%;
+  max-width: 800px;
+  padding: 8px 8px 8px 43px;
+  border: none;
+  -webkit-box-shadow: 0 0 4px #031a32;
+          box-shadow: 0 0 4px #031a32;
+  border-radius: 8px;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #021325;
+  cursor: pointer;
+  position: relative;
+}
+
+#form label[for="odabirSlike"]:focus {
+  -webkit-box-shadow: 0 0 4px #031a32, 0 0 12px #031a3293;
+          box-shadow: 0 0 4px #031a32, 0 0 12px #031a3293;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#form label[for="odabirSlike"]::before {
+  content: "\f03e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 8px;
+  top: calc(33% - 6px);
+}
+
+#form input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+#form input[type="checkbox"]::after {
+  content: "Prikaz na stranici";
+  position: absolute;
+  left: 30px;
+  top: -1px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btn-send {
+  background-color: #031a32;
+  border: 1px solid #6693e6;
+  -webkit-box-shadow: 0 0 3px #6693e6;
+          box-shadow: 0 0 3px #6693e6;
+  border-radius: 8px;
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+/* Header */
+#header {
+  background-color: #021325;
+  width: 100%;
+  padding: 15px 40px;
+}
+
+#header .header-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .header-content .site-title {
+  font-weight: bolder;
+  color: white;
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: 2.6rem;
+}
+
+#header .header-content #header-nav {
+  width: 100%;
+  padding-top: 15px;
+}
+
+#header .header-content #header-nav .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#header .header-content #header-nav .nav-list li a {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+#header .header-content #header-nav .nav-list li a:hover {
+  color: #b3c2df;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+/* Glavni dio stranice */
+#page-wrapper {
+  width: 100%;
+  max-width: 1550px;
+  margin: 80px auto 0 auto;
+  padding: 0 40px;
+}
+
+#page-wrapper .news .news-title {
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 10px;
+}
+
+#page-wrapper .news .news-title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: #6693e6;
+}
+
+#page-wrapper .news .news-articles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(230px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+#page-wrapper .news .news-articles .article {
+  cursor: pointer;
+}
+
+#page-wrapper .news .news-articles .article .img-container {
+  height: 180px;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#page-wrapper .news .news-articles .article .img-container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.4s ease-out;
+  transition: -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+}
+
+#page-wrapper .news .news-articles .article:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  transition: -webkit-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
+}
+
+/* Obojani odjeljak prije footera */
+.pre-footer {
+  width: 100%;
+  height: 50px;
+  background-color: #031a32;
+}
+
+/* Footer */
+#footer {
+  background-color: #021325;
+  color: white;
+  padding: 20px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 2;
+}
+
+#footer p {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+#footer .footer-link {
+  color: #6693e6;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
