@@ -4,7 +4,7 @@
       $varijabla = trim($varijabla);
       $varijabla = stripslashes($varijabla);
       $varijabla = htmlspecialchars($varijabla);
-      $varijabla = mysqli_real_escape_string(trim($varijabla));
+      $varijabla = str_replace("'", "", $varijabla);
 
       return $varijabla;
   }
