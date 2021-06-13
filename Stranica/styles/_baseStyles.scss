@@ -1,0 +1,86 @@
+/* Fontovi */
+@import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;600;700&family=Playfair+Display:ital@0;1&display=swap");
+
+@import "variables";
+
+/* Početne postavke stranice */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Hind", sans-serif;
+}
+
+::selection {
+  color: whitesmoke;
+  background-color: $light-blue;
+  text-shadow: 1px 1px 2px black;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: $dark-blue;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $link-blue;
+  box-shadow: inset 2px 1px 5px $dark-blue;
+}
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, $dark-blue, $light-blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-title {
+  font-family: "Playfair Display", serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-list {
+  list-style-type: none;
+
+  li {
+    margin: 0px;
+
+    a {
+      padding: 5px 10px;
+      text-align: center;
+      font-size: 0.75rem;
+    }
+  }
+}
+
+.line {
+  border: none;
+  border-bottom: 1px solid #bdbdbd;
+  margin: 50px 0;
+}
+
+.article-title {
+  font-weight: 800;
+  font-size: 1.2rem;
+  z-index: 1;
+  color: black;
+  margin: 15px 0;
+}
+
+.article-time {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #a7a7a7;
+}
